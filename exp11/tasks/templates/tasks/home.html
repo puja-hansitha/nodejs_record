@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO Application</title>
+</head>
+<body>
+  <h1>Puja(5K5) TODO List</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Enter a task" required>
+    <button type="submit">Add Task</button>
+  </form>
+
+  <h2>Tasks</h2>
+  {% for task in tasks %}
+  <p>
+    {% if task.completed %}
+      <s>{{ task.title }}</s>
+    {% else %}
+      {{ task.title }}
+    {% endif %}
+    <form method="POST" action="{% url 'complete' task.id %}" style="display:inline;">
+      {% csrf_token %}
+      <button type="submit">Complete/Undo</button>
+    </form>
+    <form method="POST" action="{% url 'delete' task.id %}" style="display:inline;">
+      {% csrf_token %}
+      <button type="submit">Delete</button>
+    </form>
+  </p>
+  {% empty %}
+  <p>No tasks available. Add your first task!</p>
+  {% endfor %}
+</body>
+</html>

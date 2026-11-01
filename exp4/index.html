@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ES6 Weather Graph App</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+input, button {
+  padding: 8px;
+  font-size: 16px;
+}
+#message {
+  color: red;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<h1>🌦 Weather Forecast Graph</h1>
+<input type="text" id="cityInput" placeholder="Enter city name" />
+<button id="getWeatherBtn">Get Weather</button>
+<p id="message"></p>
+<canvas id="weatherChart" width="600" height="300"></canvas>
+<script src="app.js"></script>
+</body>
+</html>
