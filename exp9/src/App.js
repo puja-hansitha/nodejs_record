@@ -34,7 +34,7 @@ function About() {
 }
 
 function Contact() {
-  return <h2>Contact: student@example.com</h2>;
+  return <h2>Contact: Puja K5</h2>;
 }
 
 function App() {
