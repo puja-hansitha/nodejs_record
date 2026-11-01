@@ -7,7 +7,7 @@ const secretKey = "student123";
 
 let students = [
   { id: 1, name: "Puja", age: 18 },
-  { id: 2, name: "Keerthana", age: 19 }
+  { id: 2, name: "Ravi", age: 19 }
 ];
 
 app.post("/login", (req, res) => {
